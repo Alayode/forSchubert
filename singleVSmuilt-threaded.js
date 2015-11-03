@@ -34,7 +34,7 @@
                 ping(host, function(status){
                     //.. do something like save the status updates in  the database or get new date blah blah....
                     setTimeout (query_host(host), 2000)//this is for the next ping to occur in the next predefined interval
-                }));
+                })
 }
 //main
 foreach(var host in list_of_hosts)
