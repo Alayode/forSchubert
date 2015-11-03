@@ -1,0 +1,53 @@
+
+/*
+*
+* Chris Samuel
+* ksamuel.chris@icloud.com
+*
+* github.com/alayode
+*
+* */
+
+
+<html ng-app>
+<head>
+    <script src ="angular.js"></script>
+
+    </head>
+    <body>
+<script>
+    /*
+     What is two way data binding in angularJS?
+
+     AngularJS is a JS Framework which simplifies binding JS objects with HTML UI elements
+
+        Data Binding is used to sync data to the UI automatically.
+     */
+
+    //pure JS Vanile JavaScript
+function servant(){
+    this.ServantName = "Shannon Ushinomiya"
+}
+
+var Serve = new servant();
+
+console.log(Serve.ServantName);
+
+
+//AngularJS
+
+function servantController($scope){
+    $scope.servantName = { name: "Shannon Ushinomiya" }
+};
+
+</script>
+
+
+    <div ng-controller="servantController">
+
+        <input type="text" id="txtServantName" ng-model="servantName">
+    </div>
+
+
+    </body>
+    </html>
